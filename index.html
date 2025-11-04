@@ -22,8 +22,12 @@ body, html { margin:0; padding:0; overflow:hidden; }
 <!-- arjs="sourceType: webcam;" で端末カメラを使用 --> 
 <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;
  "> 
-<!-- 既成のHIROマーカーを使う例 --> 
-<a-marker preset="hiro"> 
+ 
+<a-marker type="pattern" url="markers/mymarker.patt"> 
+<a-entity gltf-model="url(assets/model.glb)" position="0 0 0" scale=
+ "0.5 0.5 0.5"></a-entity> 
+</a-marker> 
+ 
 <!-- 原点に簡単な立方体を表示 --> 
 <a-box position="0 0.5 0" depth="1" height="1" width="1" color
  ="#4CC3D9"></a-box> 
